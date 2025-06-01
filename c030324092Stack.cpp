@@ -1,5 +1,5 @@
 #include <iostream>
-#define MAXNYA 15
+#define MAXNYA 10
 using namespace std;
 
 typedef int ItemType;
@@ -25,5 +25,13 @@ void pop(Stack *S, ItemType *x) {
     } else {
         --(S->count);
         *x = S->Item[S->count];
+    }
+}
+void push(ItemType x, Stack *S){
+    if (penuh(S)) {
+        cout << "Stack penuh!" << endl;
+    } else {
+        S->Item[S->count] = x;
+        ++(S->count);
     }
 }
