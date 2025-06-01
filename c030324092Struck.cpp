@@ -1,35 +1,35 @@
-#include "conio.h"
-#include "stdio.h"
-#include "string.h"
 #include <iostream>
-
+#include <string>
 using namespace std;
 
-struct mahasiswa
-{
-    int ipk;
-    string nim;
-    string nama;
-    string alamat;
-    string jurusan;
-    string kelas;
+    struct mahasiswa{
+	string nim;
+	string nama;
+	string alamat;
+	float ipk;
 };
 
+int inputData(string *nim, string *nama, string *alamat, float *ipk) {
+    cout << "NIM = ";          getline(cin, *nim);
+    cout << "Nama = ";         getline(cin, *nama);
+    cout << "Alamat = ";       getline(cin, *alamat);
+    cout << "IPK = ";          cin >> *ipk;
+    cin.ignore();
+}
+
+void outputData(const mahasiswa &Rajwa) {
+    system("cls");
+    cout << "\n------------- Data Pribadi ------------- :\n";
+    cout << "NIM    : " << Rajwa.nim << endl;
+    cout << "Nama   : " << Rajwa.nama << endl;
+    cout << "Alamat : " << Rajwa.alamat << endl;
+    cout << "IPK    : " << Rajwa.ipk << endl;
+    cout << "---------------------------------------\n";
+}
 
 int main() {
-    struct mahasiswa Rajwa;
-    Rajwa.ipk = 4;
-    Rajwa.nim = "C030324092";
-    Rajwa.nama = "Rajwa";
-    Rajwa.alamat = "Handil";
-    Rajwa.jurusan = "TI";
-    Rajwa.kelas = "Kelas 2B";
-    
-
-    cout << "NIM: " << Rajwa.nim << endl;
-    cout << "IPK: " << Rajwa.ipk << endl;
-    cout << "Nama: " << Rajwa.nama << endl;
-    cout << "Rajwaat: " << Rajwa.alamat << endl;
-    cout << "Jurusan: " << Rajwa.jurusan << endl;
-    cout << "Kelas: " << Rajwa.kelas << endl;
+    mahasiswa Rajwa;
+    inputData(&Rajwa.nim, &Rajwa.nama, &Rajwa.alamat, &Rajwa.ipk);
+    outputData(Rajwa);
+    return 0;
 }
