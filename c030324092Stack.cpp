@@ -10,8 +10,12 @@ typedef struct{
 } Stack;
 
 void awal(Stack *S) {
-    S->Count = 0;
+    S->count = 0;
 }
 int penuh(Stack *S){
-    return (S->Count == MAXNYA);
+    return (S->count == MAXNYA);
+}
+
+int kosong(Stack *S){
+    return (S->count == 0);
 }
