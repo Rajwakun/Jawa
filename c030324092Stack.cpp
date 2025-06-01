@@ -35,3 +35,27 @@ void push(ItemType x, Stack *S){
         ++(S->count);
     }
 }
+int main(){
+    Stack Rajwa;
+    awal(&Rajwa);
+
+    ItemType *Rawr = Rajwa.Item;
+    pop(&Rajwa, Rawr);
+    push(50, &Rajwa);
+    push(25, &Rajwa);
+    push(21, &Rajwa);
+    push(86, &Rajwa);
+    pop(&Rajwa, Rawr);
+    push(53, &Rajwa);
+    push(85, &Rajwa);
+    push(24, &Rajwa);
+    push(76, &Rajwa);
+    push(84, &Rajwa);
+    push(39, &Rajwa);
+    push(98, &Rajwa);
+    pop(&Rajwa, Rawr);
+    push(133, &Rajwa);
+    push(142, &Rajwa);
+    push(155, &Rajwa);
+    return 0;
+}
