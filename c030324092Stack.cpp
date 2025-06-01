@@ -1,10 +1,14 @@
 #include <iostream>
-#define MAXSTACK 5
+#define MAXNYA 15
 using namespace std;
 
 typedef int ItemType;
 
 typedef struct{
-    ItemType Item[MAXSTACK];
+    ItemType Item[MAXNYA];
     int count;
 } Stack;
+
+void awal(Stack *S) {
+    S->Count = 0;
+}
